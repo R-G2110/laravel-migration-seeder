@@ -10,11 +10,12 @@
                 <th scope="col">Treno</th>
                 <th scope="col">Codice Treno</th>
                 <th scope="col">Partenza da</th>
-                <th scope="col">Ore</th>
+                <th scope="col">Data - Ore</th>
                 <th scope="col">Arrivo a</th>
-                <th scope="col">Ore</th>
+                <th scope="col">Data - Ore</th>
                 <th scope="col">N° carrozze</th>
                 <th scope="col">Stato</th>
+
 
               </tr>
             </thead>
@@ -30,13 +31,14 @@
                     <td>{{ $train->wagons }}</td>
                     <td>
                         @if ($train->cancelled)
-                            <p>Cancellato</p>
+                        <p>Cancellato</p>
                         @elseif ($train->in_time)
-                            <p>In orario</p>
+                        <p>In orario</p>
                         @else
-                            <p>In ritardo di </p>
+                        <p>In ritardo di {{ $train->delay }}min</p>
                         @endif
                     </td>
+
                     </tr>
                 @endforeach
 

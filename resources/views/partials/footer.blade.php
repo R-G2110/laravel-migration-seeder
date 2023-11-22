@@ -1,3 +1,5 @@
 <footer>
-    <h1>footer</h1>
+    <div class="container text-center">
+        <h6>By: Argel</h6>
+    </div>
 </footer>
